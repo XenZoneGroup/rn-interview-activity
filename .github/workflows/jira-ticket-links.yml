@@ -8,3 +8,13 @@ jobs:
   call-global-linker:
     uses: XenZoneGroup/shared-github-actions/.github/workflows/jira-linker.yml@main
     secrets: inherit
+name: Run Jira Linker
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  call-global-linker:
+    uses: XenZoneGroup/shared-github-actions/.github/workflows/jira-linker.yml@main
+    secrets: inherit
